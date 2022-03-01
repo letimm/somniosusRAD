@@ -17,7 +17,7 @@ While some filtering occurs in STACKS2 during assembly, the bulk of filtering oc
 
 vcftools_filtering.sh calls VCFtools and filters the vcf on site and individual missingness, as well as minor allele frequency.
 
-Next, the site with the highest minor allele frequency is retained using a custom python script, vcf_retain_highestMAF.py. This script takes the vcf as input and outputs a new vcf with the suffix "one-snp-per-locus.vcf".
+Next, the site with the highest minor allele frequency is retained for each RADtag using a custom python script, vcf_retain_highestMAF.py. This script takes the vcf as input and outputs a new vcf with the suffix "one-snp-per-locus.vcf".
 
 The resulting vcf is analyzed with HDplot in R (https://github.com/gjmckinney/HDplot) and putatively paralogous loci are printed out in a "blacklist".
 
